@@ -1,0 +1,32 @@
+nav {
+  height: 120px;
+  width: 100vw;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+#logo{
+  display: inline-flex;
+  padding-top: 1em;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+  font-size: 36px;
+}
+
+.new {
+  display: inline-block;
+  position: relative;
+  float: right;
+  padding-top: 3em;
+}
+
+#arrow {
+  color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  padding-right: 3em;
+}
