@@ -28,9 +28,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
