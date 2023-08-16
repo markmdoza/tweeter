@@ -27,6 +27,9 @@
     <!-- New Tweet CSS -->
     <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css"/>
 
+    <!-- Tweet CSS -->
+    <link rel="stylesheet" href="./styles/tweet.css" type="text/css"/>
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -43,7 +46,7 @@
       <i id="arrow" class="fa-solid fa-angles-down"></i>
     </nav>
 
-    <header>
+    <header class="my-profile">
     <div class="avatar">
         <img src="./images/profile-hex.png"> 
     </div>
@@ -58,7 +61,8 @@
       <section class="new-tweet">
     <h2> New Tweet:  </h2>
     <form id="tweet-form" method="POST" action="/tweets">
-      <label class="tweet-question" for="tweet-text">What are you humming about?</label>
+      <label class="tweet-question" for="tweet-text">What are you humming about
+      </label>
       <textarea name="text" id="tweet-text"></textarea>
       <div>
         <button type="submit" class="submit-tweet">Tweet</button>
@@ -67,12 +71,29 @@
     </form>
 </section>
 <section>
-  <article class="tweet">
-    <header>
-      
+  <article>
+    <header id="user-header">
+      <img class="pfp" src="./images/profile-hex.png" alt="Users Profile Photo">
+      <h2 class="user-name">Newton</h2>
+      <div class="user-info">
+        <div class="user-handle">
+          <p>@SirIsaac</p>
+        </div>
+      </div>
+  
     </header>
+    <div class="tweet-content">
+      <textarea>If I have seen further it is by standing on the shoulders of giants</textarea>
+    </div>
     <footer>
-
+      <div class="actions">
+          <span class="tweet-age">10 days ago</span>
+          <div class="actions-right">
+            <button><i class="fa-solid fa-bookmark"></i></button>
+            <button><i class="fa-solid fa-retweet"></i></button>
+            <button><i class="fa-solid fa-heart"></i></button>
+          </div>
+        </div>
     </footer>
   </article>
 </section>

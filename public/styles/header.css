@@ -1,4 +1,4 @@
-header {
+.my-profile {
 background-color: #c28100;
 background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
 }
@@ -9,9 +9,6 @@ div.avatar {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-img {
   padding-top: 10em;
 }
 

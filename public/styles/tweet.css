@@ -1,0 +1,66 @@
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.actions-right button:hover {
+  color: darkgoldenrod;
+  cursor: pointer;
+}
+
+.actions-right {
+  margin-left: auto;
+  outline: none;
+}
+
+.fake-tweet {
+  background-color: none;
+}
+
+article {
+  border: 4px solid black;
+  margin: 20px;
+}
+
+article:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.pfp {
+  display: inline-flex;
+  align-items: flex-start;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+#user-header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-name {
+  display: flex;
+  align-items: start;
+}
+
+.user-handle {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding-left: 500px;
+  font-style: italic;
+}
