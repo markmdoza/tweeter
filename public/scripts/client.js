@@ -10,6 +10,18 @@ $(document).ready(function() {
     event.preventDefault(); // This will prevent its default behavior.
     
     const formData = $(this).serialize();
+    const tweetContent = $(this).find('textarea[name="text"]').val();
+
+    // Implement validation before sending the form data
+    if (!tweetContent) {
+      alert('This cannot be empty.'); // Alert user if they leave the tweet empty.
+      return;
+    }
+
+    if (tweetContent.length > 140) {
+      alert('Maximum characters exceeded.')
+      return;
+    }
     
     // Inside your client.js file and within the document ready function, define a function called loadTweets that is responsible for fetching tweets from the http://localhost:8080/tweets page.
     function loadTweets() {
