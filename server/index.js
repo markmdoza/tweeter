@@ -35,7 +35,22 @@ app.use("/tweets", tweetsRoutes);
 // POST ROUTES
 
 app.post('/tweets', (req, res) => {
+  const tweetText = req.body.text;
 
+  const newTweet = {
+    user: {
+      name: 'Mark Mendoza',
+      handle: '@markmdoza',
+    },
+    content: {
+      text: tweetText,
+    },
+    created_at: Date.now(),
+  };
+
+  db.tweets.push(newTweet);
+
+  req.status(201).send('Tweet was added.');
 });
 
 app.listen(PORT, () => {

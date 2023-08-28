@@ -40,34 +40,34 @@ $(document).ready(function() {
         $('form textarea').val(''); // This clears the textarea
         loadTweets();
       }
-    })
-  })
-})
+    });
+  });
+});
 
 const createTweetElement = function(tweet) {
   const $tweet = $(`
   <article>
-  <header id="user-header">
-  <img class="pfp" src="./images/profile-hex.png" alt="Users Profile Photo">
-  <h2 class="user-name">Newton</h2>
-  <div class="user-info">
-  <div class="user-handle">
-  <p>${tweet.user.handle}</p>
-  </div>
-  </div>
-  </header>
+    <header id="user-header">
+      <img class="pfp" src="./images/profile-hex.png" alt="Users Profile Photo">
+      <h2 class="user-name">${tweet.user.name}</h2>
+      <div class="user-info">
+        <div class="user-handle">
+          <p>${tweet.user.handle}</p>
+        </div>
+      </div>
+    </header>
   <div class="tweet-content">
-  <textarea readonly>${tweet.content.text}</textarea>
+    <textarea readonly>${tweet.content.text}</textarea>
   </div>
   <footer>
-  <div class="actions">
-  <span class="tweet-age">${timeago.format(tweet.created_at)}</span>
-  <div class="actions-right">
-  <button><i class="fa-solid fa-bookmark"></i></button>
-  <button><i class="fa-solid fa-retweet"></i></button>
-  <button><i class="fa-solid fa-heart"></i></button>
-  </div>
-  </div>
+    <div class="actions">
+      <span class="tweet-age">${timeago.format(tweet.created_at)}</span>
+      <div class="actions-right">
+        <button><i class="fa-solid fa-bookmark"></i></button>
+        <button><i class="fa-solid fa-retweet"></i></button>
+        <button><i class="fa-solid fa-heart"></i></button>
+      </div>
+    </div>
   </footer>
   </article>
   `);
@@ -81,8 +81,6 @@ const renderTweets = function(tweets) {
   
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    $tweetsContainer.append($tweet);
+    $tweetsContainer.prepend($tweet);
   }
 };
-
-loadTweets();
