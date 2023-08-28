@@ -6,20 +6,28 @@
 
 // Add an event listener for submit and prevent its default behavior.
 $(document).ready(function() {
+  const $errorElement = $(`#error-message`);
+  $errorElement.hide();
+
   $('form').submit(function(event) {
     event.preventDefault(); // This will prevent its default behavior.
+
+    $errorElement.slideUp();
+
     
     const formData = $(this).serialize();
     const tweetContent = $(this).find('textarea[name="text"]').val();
 
     // Implement validation before sending the form data
     if (!tweetContent) {
-      alert('This cannot be empty.'); // Alert user if they leave the tweet empty.
+      $errorElement.text('This cannot be empty.'); // Alert user if they leave the tweet empty.
+      $errorElement.slideDown();
       return;
     }
 
     if (tweetContent.length > 140) {
-      alert('Maximum characters exceeded.')
+      $errorElement.text('Maximum characters exceeded.')
+      $errorElement.slideDown();
       return;
     }
     
