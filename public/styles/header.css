@@ -1,6 +1,6 @@
 .my-profile {
-background-color: #c28100;
-background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  background-color: #c28100;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
 }
 
 div.avatar {
@@ -20,4 +20,7 @@ div.name {
 
 .notbold {
   font-weight: normal;
+}
+
+@media only screen and (min-width: 1024px) {
 }

@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -15,45 +17,38 @@ html {
  */
 
 body {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 16px;
 }
 
 .container {
-  height: 200px;
   width: 90%;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  flex-direction: row;
+  align-items: top;
+  justify-content: space-between;
+  max-width: 1200px;
 }
-
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-/* Media query for screens smaller than 768px */
-@media (max-width: 768px) {
-  .user-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .user-handle {
+.tweet-form {
+  width: 60%;
+  margin-top: 10em;
+}
+
+@media only screen and (max-width: 1024px) {
+  .tweet-form {
+    width: 100%;
     margin-top: 10px;
   }
-  
-  .tweet-content textarea {
-    width: 100%;
-  }
-  
-  .actions-right {
-    display: flex;
-    justify-content: space-between;
+
+  .container {
+    flex-direction: column;
   }
 }

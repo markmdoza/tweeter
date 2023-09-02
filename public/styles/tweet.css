@@ -64,3 +64,10 @@ article:hover {
   padding-left: 500px;
   font-style: italic;
 }
+
+@media only screen and (min-width: 1024px) {
+  .my-profile {
+    width: 30%;
+    margin-top: 10em;
+  }
+}
