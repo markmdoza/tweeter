@@ -11,9 +11,7 @@ $(document).ready(function() {
 
   $('form').submit(function(event) {
     event.preventDefault(); // This will prevent its default behavior.
-
     $errorElement.slideUp();
-
     
     const formData = $(this).serialize();
     const tweetContent = $(this).find('textarea[name="text"]').val();
@@ -44,7 +42,6 @@ $(document).ready(function() {
       data: formData,
       success: function(response) {
         console.log('Tweet submitted:', response);
-        
         $('form textarea').val(''); // This clears the textarea
         loadTweets();
       }

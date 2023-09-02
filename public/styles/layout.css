@@ -35,3 +35,25 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .user-handle {
+    margin-top: 10px;
+  }
+  
+  .tweet-content textarea {
+    width: 100%;
+  }
+  
+  .actions-right {
+    display: flex;
+    justify-content: space-between;
+  }
+}
