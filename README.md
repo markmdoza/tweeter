@@ -3,7 +3,9 @@
 A simple single page AJAX-based Twitter (or now named as X) clone that uses JQuery, HTML5, and CSS3.
 
 ## Screenshots
-
+!["Desktop view"](https://github.com/markmdoza/tweeter/blob/master/docs/tweeter-desktop.png?raw=true)
+!["Desktop view with first tweet](https://github.com/markmdoza/tweeter/blob/master/docs/tweeter-desktop-tweet.png?raw=true)
+!["Tablet & Mobile view](https://github.com/markmdoza/tweeter/blob/master/docs/tweeter-tablet-mobile-view.png?raw=true)
 ## Getting Started
 
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
