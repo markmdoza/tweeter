@@ -25,6 +25,7 @@
 }
 
 textarea {
+  resize: none;
   width: 100%;
   height: 25px;
   border-bottom: 3px solid black;
