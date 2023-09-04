@@ -2,10 +2,10 @@
 
 // Basic express setup:
 
-const PORT          = 8080;
-const express       = require("express");
-const bodyParser    = require("body-parser");
-const app           = express();
+const PORT = 8080;
+const express = require("express");
+const bodyParser = require("body-parser");
+const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -34,24 +34,7 @@ app.use("/tweets", tweetsRoutes);
 
 // POST ROUTES
 
-app.post('/tweets', (req, res) => {
-  const tweetText = req.body.text;
-
-  const newTweet = {
-    user: {
-      name: 'Mark Mendoza',
-      handle: '@markmdoza',
-    },
-    content: {
-      text: tweetText,
-    },
-    created_at: Date.now(),
-  };
-
-  db.tweets.push(newTweet);
-
-  req.status(201).send('Tweet was added.');
-});
+app.use('/tweets', tweetsRoutes);
 
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);

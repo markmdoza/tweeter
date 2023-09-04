@@ -5,14 +5,22 @@
  */
 
 // Add an event listener for submit and prevent its default behavior.
-$(document).ready(function() {
+$(document).ready(function () {
   const $errorElement = $(`#error-message`);
   $errorElement.hide();
 
-  $('form').submit(function(event) {
+  // Inside your client.js file and within the document ready function, define a function called loadTweets that is responsible for fetching tweets from the http://localhost:8080/tweets page.
+  function loadTweets() {
+    $.get('/tweets', function (data) {
+      renderTweets(data);
+    });
+  }
+  loadTweets();
+
+  $('form').submit(function (event) {
     event.preventDefault(); // This will prevent its default behavior.
     $errorElement.slideUp();
-    
+
     const formData = $(this).serialize();
     const tweetContent = $(this).find('textarea[name="text"]').val();
 
@@ -28,19 +36,12 @@ $(document).ready(function() {
       $errorElement.slideDown();
       return;
     }
-    
-    // Inside your client.js file and within the document ready function, define a function called loadTweets that is responsible for fetching tweets from the http://localhost:8080/tweets page.
-    function loadTweets() {
-      $.get('/tweets', function(data) {
-        renderTweets(data);
-      });
-    }
-    
+
     $.ajax({
       method: 'POST',
       url: '/tweets',
       data: formData,
-      success: function(response) {
+      success: function (response) {
         console.log('Tweet submitted:', response);
         $('form textarea').val(''); // This clears the textarea
         loadTweets();
@@ -49,7 +50,7 @@ $(document).ready(function() {
   });
 });
 
-const createTweetElement = function(tweet) {
+const createTweetElement = function (tweet) {
   const $tweet = $(`
   <article>
     <header id="user-header">
@@ -76,14 +77,14 @@ const createTweetElement = function(tweet) {
   </footer>
   </article>
   `);
-  
+
   return $tweet;
 };
 
-const renderTweets = function(tweets) {
+const renderTweets = function (tweets) {
   const $tweetsContainer = $('#tweets-container');
   $tweetsContainer.empty(); // This clears the previous tweets before rendering.
-  
+
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
     $tweetsContainer.prepend($tweet);

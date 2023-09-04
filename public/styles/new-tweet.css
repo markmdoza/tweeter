@@ -60,6 +60,6 @@ textarea {
 
 @media only screen and (min-width: 1024px) {
   textarea {
-    max-width: 100%;
+    max-width: 90%;
   }
 }

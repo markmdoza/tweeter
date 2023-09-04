@@ -61,7 +61,7 @@ article:hover {
   display: flex;
   flex-direction: column;
   align-items: end;
-  padding-left: 500px;
+  padding-left: 300px;
   font-style: italic;
 }
 
@@ -69,5 +69,6 @@ article:hover {
   .my-profile {
     width: 30%;
     margin-top: 10em;
+    height: 50%;
   }
 }
