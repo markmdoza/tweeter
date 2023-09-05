@@ -32,7 +32,6 @@ textarea {
   border-radius: 10px;
   box-sizing: border-box;
   border-top: 0;
-  margin: 10px;
   border-left: 0;
   border-right: 0;
   background-color: #f4f1ec;
@@ -61,6 +60,6 @@ textarea {
 
 @media only screen and (min-width: 1024px) {
   textarea {
-    max-width: 90%;
+    max-width: 100%;
   }
 }

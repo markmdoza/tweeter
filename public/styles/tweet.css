@@ -23,7 +23,9 @@
 
 article {
   border: 4px solid black;
-  margin: 20px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 1em;
 }
 
 article:hover {
@@ -42,27 +44,27 @@ article:hover {
 
 #user-header {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
 }
 
-.user-info {
+.username-image {
   display: flex;
   align-items: center;
 }
 
-.user-name {
-  display: flex;
-  align-items: start;
+.user-info {
+  font-style: italic;
 }
 
-.user-handle {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  padding-left: 300px;
-  font-style: italic;
+.tweet-form {
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+#tweets-container {
+  padding-top: 2em;
 }
 
 @media only screen and (min-width: 1024px) {

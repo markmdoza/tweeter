@@ -54,17 +54,13 @@ const createTweetElement = function (tweet) {
   const $tweet = $(`
   <article>
     <header id="user-header">
-      <img class="pfp" src="./images/profile-hex.png" alt="Users Profile Photo">
-      <h2 class="user-name">${tweet.user.name}</h2>
-      <div class="user-info">
-        <div class="user-handle">
-          <p>${tweet.user.handle}</p>
-        </div>
+      <div class="username-image">
+        <img class="pfp" src="./images/profile-hex.png" alt="Users Profile Photo">
+        <h2>${tweet.user.name}</h2>
       </div>
+      <p class="user-info">${tweet.user.handle}</p>
     </header>
-  <div class="tweet-content">
     <textarea readonly>${tweet.content.text}</textarea>
-  </div>
   <footer>
     <div class="actions">
       <span class="tweet-age">${timeago.format(tweet.created_at)}</span>

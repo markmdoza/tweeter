@@ -33,6 +33,12 @@ body {
   max-width: 1200px;
 }
 
+.user-items {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1em;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
@@ -50,5 +56,6 @@ body {
 
   .container {
     flex-direction: column;
+    width: 100%;
   }
 }
