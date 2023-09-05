@@ -11,6 +11,20 @@ $(document).ready(function () {
     } else {
       $('.counter').removeClass('invalid');
     }
+  });
+
+  // New event listener for tweet submission
+  $('#tweet-form').on('submit', function (event) {
+    event.preventDefault();
+
+    // Trim the textarea content to remove leading and trailing whitespace.
+    const trimmedContent = tweetTextarea.val().trim();
+
+    // Reset the textarea value to empty
+    $('.new-tweet textarea').val('');
+
+    // Reset the character count to 140 after submission.
+    $('.counter').text(140);
   })
   console.log('Document is ready');
 });

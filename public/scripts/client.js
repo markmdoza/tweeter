@@ -22,7 +22,7 @@ $(document).ready(function () {
     $errorElement.slideUp();
 
     const formData = $(this).serialize();
-    const tweetContent = $(this).find('textarea[name="text"]').val();
+    const tweetContent = $(this).find('textarea[name="text"]').val().trim();
 
     // Implement validation before sending the form data
     if (!tweetContent) {
