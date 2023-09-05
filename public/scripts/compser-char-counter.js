@@ -17,9 +17,6 @@ $(document).ready(function () {
   $('#tweet-form').on('submit', function (event) {
     event.preventDefault();
 
-    // Trim the textarea content to remove leading and trailing whitespace.
-    const trimmedContent = tweetTextarea.val().trim();
-
     // Reset the textarea value to empty
     $('.new-tweet textarea').val('');
 

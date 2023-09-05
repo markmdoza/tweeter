@@ -13,6 +13,10 @@ $(document).ready(function () {
   function loadTweets() {
     $.get('/tweets', function (data) {
       renderTweets(data);
+    }).fail(function (xhr, status, error) {
+      console.error('Error fetching tweets:', error);
+      $errorElement.text('Error fetching tweets. Please try again later.');
+      $errorElement.slideDown();
     });
   }
   loadTweets();
@@ -45,6 +49,11 @@ $(document).ready(function () {
         console.log('Tweet submitted:', response);
         $('form textarea').val(''); // This clears the textarea
         loadTweets();
+      },
+      error: function (xhr, status, error) {
+        console.error('There was an error submitting your tweet:', error);
+        $errorElement.text('There was an error submitting your tweet. Please try again later.');
+        $errorElement.slideDown();
       }
     });
   });
